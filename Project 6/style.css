@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #f50000;
+}
+
+.toolbar {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.toolbar label {
+  font-weight: bold;
+}
+
+#color,
+#size {
+  cursor: pointer;
+}
+
+#clear {
+  padding: 6px 12px;
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#clear:hover {
+  background-color: darkred;
+}
+
+canvas {
+  border: 2px solid #333;
+  border-radius: 8px;
+  background-color: white;
+  touch-action: none;
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+}
+
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode .toolbar {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+}
+
+body.dark-mode canvas {
+  background-color: #fff;
+  border-color: #888;
+}
+
+body.dark-mode #clear {
+  background-color: #ff4d4d;
+}
+
+body.dark-mode #clear:hover {
+  background-color: #cc0000;
+}
+
+#save {
+  padding: 6px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#save:hover {
+  background-color: #0056b3;
+}
+
+body.dark-mode #save {
+  background-color: #3399ff;
+}
+
+body.dark-mode #save:hover {
+  background-color: #007acc;
+}
+
+#eraser {
+  padding: 6px 12px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#eraser.active {
+  box-shadow: 0 0 5px 2px #ffaa00;
+}
+
+#eraser:hover {
+  background-color: darkorange;
+}
+
+body.dark-mode #eraser {
+  background-color: #ff9900;
+}
+
+body.dark-mode #eraser:hover {
+  background-color: #cc7a00;
+}
+
+#undo, #redo {
+  padding: 6px 12px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#undo:hover, #redo:hover {
+  background-color: #5a6268;
+}
+
+body.dark-mode #undo, 
+body.dark-mode #redo {
+  background-color: #444;
+}
+
+body.dark-mode #undo:hover, 
+body.dark-mode #redo:hover {
+  background-color: #333;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 14px;
+  color: #555;
+  background-color: #f1f1f1;
+  border-top: 1px solid #ccc;
+}
+
+body.dark-mode .footer {
+  background-color: #111;
+  color: #ddd;
+  border-top: 1px solid #444;
+}
